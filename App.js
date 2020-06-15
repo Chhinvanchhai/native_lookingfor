@@ -20,7 +20,20 @@ export default function App(props) {
         {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
         <NavigationContainer linking={LinkingConfiguration}>
           <Stack.Navigator>
-            <Stack.Screen name="Root" component={BottomTabNavigator} />
+            <Stack.Screen 
+              name="Root" 
+              component={BottomTabNavigator}
+              options={{
+                headerStyle: {
+                  backgroundColor: '#00A79B',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                  fontWeight: 'bold',
+                  alignSelf: 'center'
+                },
+              }}
+              />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
